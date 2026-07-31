@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Our Little Memories ❤️</title>
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Segoe UI',sans-serif;
+}
+
+body{
+background:linear-gradient(135deg,#ff77a9,#ffc0d9,#fff0f6);
+overflow-x:hidden;
+padding:40px 20px;
+animation:bg 10s infinite alternate;
+}
+
+@keyframes bg{
+0%{filter:hue-rotate(0deg);}
+100%{filter:hue-rotate(20deg);}
+}
+
+.container{
+max-width:900px;
+margin:auto;
+text-align:center;
+}
+
+h1{
+color:yellow;
+font-size:40px;
+margin-bottom:15px;
+}
+
+.subtitle{
+color:white;
+font-size:20px;
+margin-bottom:40px;
+}
+
+.memory{
+background:rgba(255,255,255,.18);
+backdrop-filter:blur(15px);
+border-radius:25px;
+padding:20px;
+margin:30px 0;
+box-shadow:0 10px 30px rgba(0,0,0,.15);
+animation:fadeUp 1s;
+}
+
+@keyframes fadeUp{
+from{
+opacity:0;
+transform:translateY(40px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+.memory img{
+width:30%;
+border-radius:20px;
+margin-bottom:20px;
+}
+
+.memory h2{
+color:violet;
+margin-bottom:10px;
+}
+
+.memory p{
+color:navy;
+font-size:18px;
+line-height:30px;
+}
+
+.quote{
+margin:50px 0;
+font-size:28px;
+color:white;
+font-weight:bold;
+line-height:45px;
+}
+
+button{
+padding:15px 35px;
+font-size:18px;
+border:none;
+border-radius:50px;
+background:white;
+color:#ff4081;
+cursor:pointer;
+font-weight:bold;
+transition:.3s;
+}
+
+button:hover{
+transform:scale(1.08);
+}
+
+.float{
+position:fixed;
+bottom:-40px;
+font-size:25px;
+animation:float 8s linear infinite;
+pointer-events:none;
+}
+
+@keyframes float{
+0%{
+transform:translateY(0);
+opacity:1;
+}
+100%{
+transform:translateY(-110vh);
+opacity:0;
+}
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>📖 Our Little Kaadhal Kadhai ❤️</h1>
+
+<p class="subtitle">
+Every picture...
+Every chat...
+Every memory...
+enaku ellame means the world to me everything about you is special for me im always there for you 
+</p>
+
+<div class="memory">
+
+<img src="map.jpg">
+
+<h2>🌸 Love Beyond Miles </h2>
+
+<p>
+The love i have for you is unmeasureable i will keep loving you no matter how long this distance is 
+</p>
+
+</div>
+
+<div class="memory">
+
+<img src="chat.jpg">    <img src="chat3.jpg">
+
+<h2>💬 My Favorite Chat</h2>
+
+<p>
+This conversation still lives in my heart
+I don't think I'll ever delete it
+It reminds me how special you are</p>
+
+</div>
+
+<div class="memory">
+
+<img src="sunset1.jpg"> <img src="sunset2.jpg">
+
+<h2>🌅 The Sunset</h2>
+
+<p>
+Every sunset reminds me...
+One day,
+I'll be watching it beside you
+not through my phone
+</p>
+
+</div>
+
+<div class="quote">
+
+❤️
+
+Distance is only temporary...
+
+My love for you isn't.
+
+❤️
+
+</div>
+
+<button onclick="location.href='page3.html'">
+
+One Last Surprise ❤️
+
+</button>
+
+</div>
+
+<script>
+
+const emoji=["❤️","💕","💖","💗","💘","💞","💓","💋","🌸","✨","🤍"];
+
+setInterval(()=>{
+
+let h=document.createElement("div");
+
+h.className="float";
+
+h.innerHTML=emoji[Math.floor(Math.random()*emoji.length)];
+
+h.style.left=Math.random()*100+"vw";
+
+h.style.fontSize=(20+Math.random()*20)+"px";
+
+h.style.animationDuration=(5+Math.random()*5)+"s";
+
+document.body.appendChild(h);
+
+setTimeout(()=>{
+h.remove();
+},9000);
+
+},250);
+
+</script>
+
+</body>
+</html>

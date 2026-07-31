@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For My Beautiful Girl ❤️</title>
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Segoe UI',sans-serif;
+}
+
+body{
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+overflow:hidden;
+background:linear-gradient(-45deg,#ff5f9e,#ff9ac6,#ffd8e8,#fff5fb);
+background-size:400% 400%;
+animation:bg 10s ease infinite;
+}
+
+@keyframes bg{
+0%{background-position:0% 50%;}
+50%{background-position:100% 50%;}
+100%{background-position:0% 50%;}
+}
+
+.card{
+width:90%;
+max-width:420px;
+padding:35px;
+text-align:center;
+background:rgba(255,255,255,.18);
+backdrop-filter:blur(15px);
+border-radius:30px;
+box-shadow:0 15px 35px rgba(0,0,0,.2);
+z-index:5;
+animation:fadeIn 2s;
+}
+
+@keyframes fadeIn{
+from{opacity:0;transform:translateY(30px);}
+to{opacity:1;transform:translateY(0);}
+}
+
+h1{
+font-size:35px;
+color:Purple;
+margin-bottom:20px;
+}
+
+p{
+font-size:20px;
+color:darkblue;
+line-height:32px;
+margin-bottom:25px;
+}
+
+button{
+padding:15px 35px;
+font-size:18px;
+border:none;
+border-radius:50px;
+background:white;
+color:#ff3b82;
+cursor:pointer;
+font-weight:bold;
+transition:.3s;
+}
+
+button:hover{
+transform:scale(1.08);
+}
+
+.heart{
+position:absolute;
+bottom:-50px;
+font-size:24px;
+animation:float 8s linear infinite;
+opacity:.8;
+}
+
+@keyframes float{
+0%{
+transform:translateY(0) rotate(0deg);
+opacity:1;
+}
+100%{
+transform:translateY(-110vh) rotate(360deg);
+opacity:0;
+}
+}
+
+.footer{
+margin-top:25px;
+font-size:14px;
+color:white;
+opacity:.9;
+}
+</style>
+</head>
+
+<body>
+
+<div class="card">
+
+<h1>🤍Hey Kanmaniii🤍</h1>
+
+<p>
+Happy Girlfriend Day, my love. ❤️<br><br><br> I love you so much <br> 
+This isn't just another page...<br>
+
+It's a tiny world I made just for you.<br><br>
+
+Every click holds a little piece of my heart. 🥹💖
+</p>
+
+<button onclick="location.href='page2.html'">
+Open My Heart ❤️
+</button>
+
+<div class="footer">
+Made with endless love 🤍
+</div>
+
+</div>
+
+<script>
+
+const emojis=["❤️","💕","💖","💗","💘","💞","🐵","💋","🌸","✨","🤍"];
+
+function createHeart(){
+
+let heart=document.createElement("div");
+
+heart.className="heart";
+
+heart.innerHTML=emojis[Math.floor(Math.random()*emojis.length)];
+
+heart.style.left=Math.random()*100+"vw";
+
+heart.style.fontSize=(20+Math.random()*25)+"px";
+
+heart.style.animationDuration=(5+Math.random()*5)+"s";
+
+document.body.appendChild(heart);
+
+setTimeout(()=>{
+heart.remove();
+},10000);
+
+}
+
+setInterval(createHeart,250);
+
+</script>
+
+</body>
+</html>
